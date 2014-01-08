@@ -94,7 +94,7 @@ static void ONEReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRe
 
 + (BOOL)isReachable
 {
-    return [[self sharedInstance] status] != FXReachabilityStatusNotReachable;
+    return [[self sharedInstance] status] != FXReachabilityStatusNotReachable && [[self sharedInstance] status] != FXReachabilityStatusUnknown;
 }
 
 - (id)init
